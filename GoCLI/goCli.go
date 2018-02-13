@@ -17,7 +17,7 @@ func main(){
 	app.Compiled = time.Now()
 	app.Usage = "Print a hello world message"
 	app.Authors = []cli.Author{
-		cli.Author{
+		{
 			Name:  "Adam R. Webb",
 			Email: "adamwebb13@gmail.com",
 		},
@@ -41,7 +41,7 @@ func main(){
 			Aliases: []string{"y"},
 			Usage: "Yell at the user.",
 			Action: func(c *cli.Context) error {
-				fmt.Println("YOU MORON, ", c.Args().First())
+				fmt.Println("YOU MORON,", c.Args().First())
 				return nil
 			},
 		},
